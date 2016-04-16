@@ -42,4 +42,7 @@ for (file in files_bianbian){
   b_songs<-rbind(b_songs,b_song)
 }
 proc.time() - ptm
-final<-cbind(files_bianbian,a_songs,m_songs,b_songs)
+###Please change the number to 1-5 accordingly
+##eg. Ziyue Jin: songs_1 <-cbind()
+songs_2<-cbind(files_bianbian,a_songs,m_songs,b_songs)
+save(songs_2,file="songs_2.RData")
