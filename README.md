@@ -1,5 +1,5 @@
 # Final Project By Group A++++++
-Present to you by: Ziyue JIN, Ziyue WU, Yimin ZHANG, Jingying ZHOU and Yibo ZHU
+Ziyue JIN, Ziyue WU, Yimin ZHANG, Jingying ZHOU and Yibo ZHU
 
 ### Data
 * Source: [Million Song Dataset](http://labrosa.ee.columbia.edu/millionsong/)
