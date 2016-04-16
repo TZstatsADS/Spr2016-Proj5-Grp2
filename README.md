@@ -9,7 +9,9 @@ Note: Currently building up a toy model with a random subset of 10,000 songs (1.
 #### Data Processing:
 
 ```{r}
+# Read files
 library(rhdf5)
+# Word Cloud
 library(wordcloud) 
 library(tm)
 library(NLP)
