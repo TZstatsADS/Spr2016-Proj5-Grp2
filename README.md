@@ -10,4 +10,9 @@ Note: Currently building up a toy model with a random subset of 10,000 songs (1.
 
 ```{r}
 library(rhdf5)
+library(wordcloud) 
+library(tm)
+library(NLP)
+library(RColorBrewer)
+library(SnowballC)
 ```
