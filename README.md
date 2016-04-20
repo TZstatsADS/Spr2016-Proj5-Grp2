@@ -25,6 +25,6 @@ library(SnowballC)
 ```
 
 ### Reference
-[Capturing the Temporal Domain
+Capturing the Temporal Domain
 in Echonest Features
-for Improved Classification Effectiveness](http://www.ifs.tuwien.ac.at/~schindler/pubs/AMR2012.pdf) *Explains Timbre*  
+for Improved Classification Effectiveness [*Explains Timbre*](http://www.ifs.tuwien.ac.at/~schindler/pubs/AMR2012.pdf)
