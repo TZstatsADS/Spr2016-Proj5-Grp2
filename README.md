@@ -12,7 +12,7 @@ Note: Currently building up a toy model with a random subset of 10,000 songs (1.
 * Source: [song_user_count]
 * Format:  
 
-#### Data Processing:
+#### Data Processing
 
 ```{r}
 # Read files
