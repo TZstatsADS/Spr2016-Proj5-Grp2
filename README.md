@@ -10,7 +10,8 @@ Note: Currently building up a toy model with a random subset of 10,000 songs (1.
 * Format:.txt(BoW)
 
 * Source: [song_user_count]
-* Format:
+* Format:  
+
 #### Data Processing:
 
 ```{r}
