@@ -18,7 +18,7 @@ Ziyue JIN, Ziyue WU, Yimin ZHANG, Jingying ZHOU and Yibo ZHU
 1     /analysis            bars_confidence H5I_DATASET    FLOAT       194
 2     /analysis                 bars_start H5I_DATASET    FLOAT       194
 3     /analysis           beats_confidence H5I_DATASET    FLOAT       979
-      ...         ...         ...         ...
+      ...         ...         ...         ...         ...
 21    /metadata            similar_artists H5I_DATASET   STRING       100
 22    /metadata                      songs H5I_DATASET COMPOUND         1
 23            /                musicbrainz   H5I_GROUP                   
@@ -44,9 +44,8 @@ We used this play-count data to generate a "user defined" song similiarity mesur
 * Format:.txt(BoW)
 
 
-
 #### Data Processing
-
+For each song we obtained 144 features. Removing songs with NAs in thoes fields, we are left with 5580 songs.
 ```{r}
 # Read files
 library(rhdf5)
@@ -57,8 +56,16 @@ library(NLP)
 library(RColorBrewer)
 library(SnowballC)
 ```
+### Methodology
+1. We used the user playcount data to work out the pairwise "distance" between songs  
+2. We calculated for the pairwise difference between songs across all extracted features  
+3. We used Random Forest to regress the song feature difference and "user defined features", and through the importance ranking we conclude what features contribute to the "User defined similarity"
+
+### Exploratory Data Analysis
+
+
 
 ### Reference
 Capturing the Temporal Domain
 in Echonest Features
-for Improved Classification Effectiveness [*Explains Timbre*](http://www.ifs.tuwien.ac.at/~schindler/pubs/AMR2012.pdf)
+for Improved Classification Effectiveness [*On Feature Selection*](http://www.ifs.tuwien.ac.at/~schindler/pubs/AMR2012.pdf)
