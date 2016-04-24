@@ -32,10 +32,15 @@ Ziyue JIN, Ziyue WU, Yimin ZHANG, Jingying ZHOU and Yibo ZHU
 * [Echo Nest Tase Profile Data](The Echo Nest Taste Profile Subset)
 * Format: Play count per song per user:
 * How we utilized our data:    
-We used this play-count data to generate a "user defined" song similiarity mesure.
+We used this play-count data to generate a "user defined" song similiarity mesure
 
+##### Source 3. Genre
+* [Tagtraum Genre Annotations](http://www.tagtraum.com/msd_genre_datasets.html)
+* Format: .cls 
+* How we utilized our data:   
+????????????????
 
-
+##### Source 4. Lyrics BoW
 * Source: [musiXmatch dataset](http://labrosa.ee.columbia.edu/millionsong/musixmatch)
 * Format:.txt(BoW)
 
