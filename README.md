@@ -1,7 +1,7 @@
 # Final Project By Group A++++++
 Ziyue JIN, Ziyue WU, Yimin ZHANG, Jingying ZHOU and Yibo ZHU
 
-### Data
+## Data
 ##### Source 1. Sound Analysis
 * [Million Song Dataset](http://labrosa.ee.columbia.edu/millionsong/)
 * Format: .h5 [Hierarchical Data Format](https://en.wikipedia.org/wiki/Hierarchical_Data_Format)  
@@ -56,16 +56,16 @@ library(NLP)
 library(RColorBrewer)
 library(SnowballC)
 ```
-### Methodology
+## Methodology
 1. We used the user playcount data to work out the pairwise "distance" between songs  
 2. We calculated for the pairwise difference between songs across all extracted features  
 3. We used Random Forest to regress the song feature difference and "user defined features", and through the importance ranking we conclude what features contribute to the "User defined similarity"
 
-### Exploratory Data Analysis
+## Exploratory Data Analysis
 
 
 
-### Reference
+## Reference
 Capturing the Temporal Domain
 in Echonest Features
 for Improved Classification Effectiveness [*On Feature Selection*](http://www.ifs.tuwien.ac.at/~schindler/pubs/AMR2012.pdf)
