@@ -2,14 +2,16 @@
 Ziyue JIN, Ziyue WU, Yimin ZHANG, Jingying ZHOU and Yibo ZHU
 
 ### Data
-##### Source 1. 
+##### Source 1. Sound Analysis
 * [Million Song Dataset](http://labrosa.ee.columbia.edu/millionsong/)
 * Format: .h5: [Hierarchical Data Format](https://en.wikipedia.org/wiki/Hierarchical_Data_Format)  
-* How we used our data: 
-- Made exploratory data analysis on the metadata for all 1,000,000 songs (300 Mb)
-- Extracted sound analysis data from a random subset, consiting of 10,000 songs
-
-*A brief glimpse of all the blood and tears we've been through*
+* How we utilized our data: 
+1) Made exploratory data analysis on the metadata for all 1,000,000 songs (Meta Data: 300 MB)
+2) Extracted sound analysis data from a random subset, consiting of 10,000 songs (Sound Analysis: 1.8 GB)
+          - Temporal structures: eg.beats/bar lengths distribution
+          - Loudness, timbre and pitches
+          - 
+*A brief glimpse of all the blood and tears we've been through...*
 ```
           group                       name       otype   dclass       dim
 0             /                   analysis   H5I_GROUP                   
@@ -26,11 +28,12 @@ Ziyue JIN, Ziyue WU, Yimin ZHANG, Jingying ZHOU and Yibo ZHU
 
 ```
 
-##### Source 2.
-* Source: [Echo Nest Tase Profile Data](The Echo Nest Taste Profile Subset)
+##### Source 2. User Preference
+* [Echo Nest Tase Profile Data](The Echo Nest Taste Profile Subset)
 * Format:  
+* How we utilized our data: 
 
-Note: Currently building up a toy model with a random subset of 10,000 songs (1.8 GB compressed)  
+
 
 * Source: [musiXmatch dataset](http://labrosa.ee.columbia.edu/millionsong/musixmatch)
 * Format:.txt(BoW)
