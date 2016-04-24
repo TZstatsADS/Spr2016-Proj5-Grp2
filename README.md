@@ -60,7 +60,8 @@ library(SnowballC)
 1. We used the user playcount data to work out the pairwise "distance" between songs  
 2. We calculated for the pairwise difference between songs across all extracted features  
 3. We used Random Forest to regress the song feature difference and "user defined features", and through the importance ranking we conclude what features contribute most strongly to the "user defined similarity"
-4. We performed hierachical clustering using only the features we selected from part 3 and then look into the sound feature, lyric topics; further we visualize and compare the results accross diffferent clusters
+4. We performed hierachical clustering using only the features we selected from part 3 and then look into the sound feature, lyric topics; further we visualize and compare the results accross diffferent clusters  
+
 ## Exploratory Data Analysis
 
 
