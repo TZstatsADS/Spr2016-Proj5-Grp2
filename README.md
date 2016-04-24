@@ -18,7 +18,7 @@ Ziyue JIN, Ziyue WU, Yimin ZHANG, Jingying ZHOU and Yibo ZHU
 1     /analysis            bars_confidence H5I_DATASET    FLOAT       194
 2     /analysis                 bars_start H5I_DATASET    FLOAT       194
 3     /analysis           beats_confidence H5I_DATASET    FLOAT       979
-......
+      ...         ...         ...         ...
 21    /metadata            similar_artists H5I_DATASET   STRING       100
 22    /metadata                      songs H5I_DATASET COMPOUND         1
 23            /                musicbrainz   H5I_GROUP                   
@@ -30,8 +30,9 @@ Ziyue JIN, Ziyue WU, Yimin ZHANG, Jingying ZHOU and Yibo ZHU
 
 ##### Source 2. User Preference
 * [Echo Nest Tase Profile Data](The Echo Nest Taste Profile Subset)
-* Format:  
-* How we utilized our data: 
+* Format: Play count per song per user:
+* How we utilized our data:    
+We used this play-count data to generate a "user defined" song similiarity mesure.
 
 
 
