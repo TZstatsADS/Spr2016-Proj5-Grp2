@@ -6,11 +6,11 @@ Ziyue JIN, Ziyue WU, Yimin ZHANG, Jingying ZHOU and Yibo ZHU
 * [Million Song Dataset](http://labrosa.ee.columbia.edu/millionsong/)
 * Format: .h5: [Hierarchical Data Format](https://en.wikipedia.org/wiki/Hierarchical_Data_Format)  
 * How we utilized our data: 
-1) Made exploratory data analysis on the metadata for all 1,000,000 songs (Meta Data: 300 MB)
-2) Extracted sound analysis data from a random subset, consiting of 10,000 songs (Sound Analysis: 1.8 GB)
-          - Temporal structures: eg.beats/bar lengths distribution
-          - Loudness, timbre and pitches
-          - 
+1) Made exploratory data analysis on the metadata for all 1,000,000 songs (Meta Data: 300 MB)  
+2) Extracted sound analysis data from a random subset, consiting of 10,000 songs (Sound Analysis: 1.8 GB)  
+          - Temporal structures: eg.beats/bar lengths distribution  
+          - Loudness, timbre and pitches  
+          -   
 *A brief glimpse of all the blood and tears we've been through...*
 ```
           group                       name       otype   dclass       dim
