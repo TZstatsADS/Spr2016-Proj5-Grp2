@@ -4,7 +4,7 @@ Ziyue JIN, Ziyue WU, Yimin ZHANG, Jingying ZHOU and Yibo ZHU
 ### Data
 ##### Source 1. Sound Analysis
 * [Million Song Dataset](http://labrosa.ee.columbia.edu/millionsong/)
-* Format: .h5: [Hierarchical Data Format](https://en.wikipedia.org/wiki/Hierarchical_Data_Format)  
+* Format: .h5 [Hierarchical Data Format](https://en.wikipedia.org/wiki/Hierarchical_Data_Format)  
 * How we utilized our data:   
 1) Made exploratory data analysis on the metadata for all 1,000,000 songs (Meta Data: 300 MB)  
 2) Extracted sound analysis data from a random subset, consiting of 10,000 songs (Sound Analysis: 1.8 GB)  
@@ -27,7 +27,6 @@ Ziyue JIN, Ziyue WU, Yimin ZHANG, Jingying ZHOU and Yibo ZHU
 26 /musicbrainz                      songs H5I_DATASET COMPOUND         1
 
 ```
-
 ##### Source 2. User Preference
 * [Echo Nest Tase Profile Data](The Echo Nest Taste Profile Subset)
 * Format: Play count per song per user:
