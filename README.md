@@ -1,4 +1,4 @@
-# Final Project By Group A++++++
+# A Million Song Dataset
 Ziyue JIN, Ziyue WU, Yimin ZHANG, Jingying ZHOU and Yibo ZHU
 
 ## Data
@@ -10,7 +10,6 @@ Ziyue JIN, Ziyue WU, Yimin ZHANG, Jingying ZHOU and Yibo ZHU
 2) Extracted sound analysis data from a random subset, consiting of 10,000 songs (Sound Analysis: 1.8 GB)  
           - Temporal structures: eg.beats/bar lengths distribution  
           - Loudness, timbre and pitches  
-          -   
 *A brief glimpse of all the blood and tears we've been through...*
 ```
           group                       name       otype   dclass       dim
@@ -30,42 +29,49 @@ Ziyue JIN, Ziyue WU, Yimin ZHANG, Jingying ZHOU and Yibo ZHU
 ##### Source 2. User Preference
 * [Echo Nest Tase Profile Data](The Echo Nest Taste Profile Subset)
 * Format: Play count per song per user:
-* How we utilized our data:    
-We used this play-count data to generate a "user defined" song similiarity mesure
+* How we utilized our data:  
+We used this play-count data to generate a "user defined" song similiarity mesure, and then tried random forest and LASSO to select the sound features (from dataset 1) that play the most important roles in determining thi
 
-##### Source 3. Genre
-* [Tagtraum Genre Annotations](http://www.tagtraum.com/msd_genre_datasets.html)
-* Format: .cls 
-* How we utilized our data:   
-????????????????
-
-##### Source 4. Lyrics BoW
+##### Source 3. Lyrics BoW
 * Source: [musiXmatch dataset](http://labrosa.ee.columbia.edu/millionsong/musixmatch)
 * Format:.txt(BoW)
+* How we utilized our data:   
+We implemented a topic model using Laten Dirichlet Allocation with 10 and 15 topics. This cluster is generated purely independently from the rest of the clusters, and we would like to see if the clusters generated from the sound features are indeed "literally" different from each other.
 
+##### Source 4. Genre
+* [Tagtraum Genre Annotations](http://www.tagtraum.com/msd_genre_datasets.html)
+* Format: .cls 
+* How we utilized... Fancy Plots!
 
-#### Data Processing
-For each song we obtained 144 features. Removing songs with NAs in thoes fields, we are left with 5580 songs.
-```{r}
-# Read files
-library(rhdf5)
-# Word Cloud
-library(wordcloud) 
-library(tm)
-library(NLP)
-library(RColorBrewer)
-library(SnowballC)
-```
 ## Methodology
-1. We used the user playcount data to work out the pairwise "distance" between songs  
-2. We calculated for the pairwise difference between songs across all extracted features  
-3. We used Random Forest to regress the song feature difference and "user defined features", and through the importance ranking we conclude what features contribute most strongly to the "user defined similarity"
-4. We performed hierachical clustering using only the features we selected from part 3 and then look into the sound feature, lyric topics; further we visualize and compare the results accross diffferent clusters  
+#### To make a long story short,  
+We used playcount data to select song features that play an important role in deciding the "crowd defined similarity", and then clustered our songs using the sound features.  
+Using the lyrics Bag-of-Words data, we did topic modelling and assigned "topics" to the songs we have.   
+We then looked into how these two cluster results differ/resembles each other.
 
 ## Exploratory Data Analysis
+## Building up Our Model  
+### Feature Selection
+![Random Forest](https://github.com/TZstatsADS/finalproject-group-2/blob/master/lib/web/img/rf.jpg?raw=true "Logo Title Text 1")
+### Hierachical Clustering
+By calculating silhoutte distance, and visualizing clustering in first two pc plots, we think five clusterings will be a good result. From the two cluster plot, we also can see 5 plot makes sense.
+![Selecting Number of Clusters](https://github.com/TZstatsADS/finalproject-group-2/blob/master/lib/web/img/select_dimension.png?raw=true "Logo Title Text 1")
+```
+## 2 0.6098073 
+## 3 0.44251 
+## 4 0.03555164 
+## 5 0.02601014 
+## 6 0.02841965 
+## 7 0.02566342 
+## 8 0.02302715 
+## 9 0.02371691 
+## 10 0.0224799
+```
+#### Clustering Result   
+![HCLUST](https://github.com/TZstatsADS/finalproject-group-2/blob/master/lib/web/img/hclust.jpg?raw=true)
 
-
-
+### Topic Modelling 
+![10Cluster](https://github.com/TZstatsADS/finalproject-group-2/blob/master/lib/web/img/topic.jpg?raw=true)
 ## Reference
 Capturing the Temporal Domain
 in Echonest Features
