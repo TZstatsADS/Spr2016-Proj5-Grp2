@@ -72,6 +72,9 @@ By calculating silhoutte distance, and visualizing clustering in first two pc pl
 
 ### Topic Modelling 
 ![10Cluster](https://github.com/TZstatsADS/finalproject-group-2/blob/master/lib/web/img/topic.jpg?raw=true)
+
+## Conclusion
+
 ## Reference
 Capturing the Temporal Domain
 in Echonest Features
