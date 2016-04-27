@@ -65,7 +65,7 @@ Plotting on the first 2PCs
 
 
 ### A Comparison  
-
+![Comparison](https://github.com/TZstatsADS/finalproject-group-2/blob/master/lib/web/img/comparison.jpg?raw=true)
 
 ### Feature Selection and Hierachical Clustering
 ##### Based on Random Forest
@@ -74,6 +74,7 @@ Plotting on the first 2PCs
 ![HCLUST](https://github.com/TZstatsADS/finalproject-group-2/blob/master/lib/web/img/hclust.jpg?raw=true)
 
 ## Conclusion
+
 
 ## Reference
 Capturing the Temporal Domain
