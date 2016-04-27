@@ -30,14 +30,12 @@ Ziyue JIN, Ziyue WU, Yimin ZHANG, Jingying ZHOU and Yibo ZHU
 * [Echo Nest Tase Profile Data](The Echo Nest Taste Profile Subset)
 * Format: Play count per song per user:
 * How we utilized our data:  
-
 We used this play-count data to generate a "user defined" song similiarity mesure, and then tried random forest and LASSO to select the sound features (from dataset 1) that play the most important roles in determining thi
 
 ##### Source 3. Lyrics BoW
 * Source: [musiXmatch dataset](http://labrosa.ee.columbia.edu/millionsong/musixmatch)
 * Format:.txt(BoW)
 * How we utilized our data:   
-
 We implemented a topic model using Laten Dirichlet Allocation with 10 and 15 topics. This cluster is generated purely independently from the rest of the clusters, and we would like to see if the clusters generated from the sound features are indeed "literally" different from each other.
 
 ##### Source 4. Genre
@@ -45,24 +43,11 @@ We implemented a topic model using Laten Dirichlet Allocation with 10 and 15 top
 * Format: .cls 
 * How we utilized... Fancy Plots!
 
-
-#### Data Processing
-For each song we obtained 144 features. Removing songs with NAs in thoes fields, we are left with 5580 songs.
-```{r}
-# Read files
-library(rhdf5)
-# Word Cloud
-library(wordcloud) 
-library(tm)
-library(NLP)
-library(RColorBrewer)
-library(SnowballC)
-```
 ## Methodology
-1. We used the user playcount data to work out the pairwise "distance" between songs  
-2. We calculated for the pairwise difference between songs across all extracted features  
-3. We used Random Forest to regress the song feature difference and "user defined features", and through the importance ranking we conclude what features contribute most strongly to the "user defined similarity"
-4. We performed hierachical clustering using only the features we selected from part 3 and then look into the sound feature, lyric topics; further we visualize and compare the results accross diffferent clusters  
+#### To make a long story short,  
+We used playcount data to select song features that play an important role in deciding the "crowd defined similarity", and then clustered our songs using the sound features.  
+Using the lyrics Bag-of-Words data, we did topic modelling and assigned "topics" to the songs we have.   
+We then looked into how these two cluster results differ/resembles each other.
 
 ## Exploratory Data Analysis
 
