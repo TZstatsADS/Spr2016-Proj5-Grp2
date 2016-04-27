@@ -52,17 +52,11 @@ p {
 
 
 ul {
-    background:#3399ff;
+    
     padding: 20px;
     font-family: "Helvetica Neue";
 }
 
-
-ul li {
-    background: #cce5ff;
-    padding: 5px;
-    margin: 5px;
-}
 
 .tabbed-pane {
   padding-top: 12px;
