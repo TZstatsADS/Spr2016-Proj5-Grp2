@@ -37,8 +37,14 @@
 		</div>
 
 		<div id = "eda">
-			<h3>Exploratory Data Analysis</h3>
-			<h4>Artists are around the world!</h4>	
+			<h3>Exploratory Our Dataset</h3>
+			<ul>
+			<li>1. Million Songs Dataset.</li>		
+			<li>2. Artists are mainly from North America and Europe.</li>
+			<li>3. Bubble size stands for number of records.</li>		
+			<li>4. Color stands for hotness of the artists.</li>         
+			</ul>
+
 			<div id = "map">
 				<script type='text/javascript' src='https://public.tableau.com/javascripts/api/viz_v1.js'></script>
 				<div class='tableauPlaceholder' style='width: 1004px; height: 869px;'>
@@ -64,6 +70,14 @@
 				</div>
 			
 			</div>
+			<p>Overview of our songs</p>
+			<ul>
+			<li>1. Amount records increasing faster and faster.</li>		
+			<li>2. After 2005 a lot of records weren't collected in the dataset .</li>
+			<li>3. Golden age of rock starts from 1970s (Wiki).</li>		
+			<li>4. 1977 the first metal record appeared.</li>      
+			<li>5. As an old mainstream music, jazz is becoming less popular.</li>     
+			</ul>
 
 			<div id="genres">
 				<script type='text/javascript' src='https://public.tableau.com/javascripts/api/viz_v1.js'></script>
@@ -91,6 +105,8 @@
 			</div>
 
 		</div>
+		<a href="https://www.youtube.com/watch?v=FFvs49kdLaA"><p>Mainstream?</p></a>
+
 
 		<div>
 			<h3>How to Define a Mainstream Music?</h3>
@@ -118,9 +134,9 @@
 
 
 		<div id = "lyrics">
-			<h3>Topic Clusters</h3>	
+			<h3>Lyrics Clusters</h3>	
 			<ul>
-			<li>1. Used Bag of word from each songs.</li>		
+			<li>1. Used bag of words from each song.</li>		
 			<li>2. Choose the number of clusters based on the log likelihood.</li>        
 			</ul>
 			
@@ -133,14 +149,14 @@
 			<p>How are they related?</p>
 			
 			<center>
-				<img src="img/hCluster_topic.jpg">
+				<img src="img/comparison.jpg">
 				<p>We obtained the Chi-squared test of independence with p-value = 2.2e-16 </p>
 			</center>
 
-
+			<h3>Here is our mainstream music formula</h3>
 
 			<h4>Sound Feature Cluster</h4>
-			<center><img src="img/soundFeatureStats.jpg"></center>
+			<center><img src="img/soundFeatureStats.jpg"  width="600" height="400"></center>
 
 			<h4>Dominant Clusters of Topic</h4>
 			<center>
@@ -148,7 +164,15 @@
 			</center>
 
 
-			<h4>What about adding users information?</h4>
+			<h4>Verify by adding users information?</h4>
+				<center><p style="font-size:50px;">Sound Features vs User defined Similarity</p></center>
+				<li>Sound Features: independent variables</li>
+				<li>User defined Similarity: dependent variables</li>
+				<li><b>Case control to subset the sparse data</b><br/></li>
+
+
+
+
 			<p><b>LASSO</b><br/>
 			<ul>
 				<li>
@@ -157,13 +181,18 @@
 				<li>Other: 'year'<br/></li>
 			</ul>
 			</p>
-			<center><div style="zoom: 0.7;"><img src="img/hclust.jpg"/ ></div></center>
+
+			<center><img src="img/hclust.jpg" ></center>
+			
 
 			<p><b>Random Forest:</b><br/>
 				<center><img src="img/rf.jpg" width="600" height="400"></center>
 			</p>
-			<center><img src="img/rf_cluster.png"></center>
+			<center><img src="img/rf_cluster.png" width="600" height="400"></center>
 			
+			<p>Most of tracks defined in our mainstream formula are falling into our largest clusters on the above models: (1154/1175) </p>
+
+
 		</div>
 
 

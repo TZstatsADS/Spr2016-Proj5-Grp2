@@ -1,6 +1,8 @@
 # A Million Song Dataset
 Ziyue JIN, Ziyue WU, Yimin ZHANG, Jingying ZHOU and Yibo ZHU
 
+[report](https://zac2116.github.io/)
+
 ## Data
 ##### Source 1. Sound Analysis
 * [Million Song Dataset](http://labrosa.ee.columbia.edu/millionsong/)
