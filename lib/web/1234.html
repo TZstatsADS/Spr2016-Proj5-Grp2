@@ -10,7 +10,7 @@
 	<div class = "main-container">
 
 		<div id="title">
-			<center><h1>Become a Musical Connoisseur in 5 Minutes</h1></center>
+			<center><h1>What is mainstream music?</h1></center>
 			<center><h3>Million Songs Dataset Exploration</h3></center>
 			<center><h4 style = "font-weight:normal">Jingying Zhou, Yibo Zhu, Yimin Zhang, Ziyue Jin, Ziyue Wu</h4></center>
 			<center><h4 style = "font-weight:normal">April 24, 2016</h4></center>
@@ -122,7 +122,51 @@
 
 		<div id = "songs">
 			<h3>What Does the Music Say?</h3>
-			<h4>Music features that matter </h4>	
+			<ul>
+			<li>1. Used all musics features for clusterings.</li>		
+			<li>2. Used Silhoutte methods to select number of clusters.</li>        
+			</ul>
+
+			<center>
+				<img src = "img/select_dimension.png">
+			</center>
+
+		</div>
+
+
+		<div id = "lyrics">
+			<h3>Topic Clusters</h3>	
+			<ul>
+			<li><b>1. Used Bag of word from each songs.</b></li>		
+			<li><b>2. Choose the number of clusters based on the log likelihood.</b></li>        
+			</ul>
+			
+			<a href="vis/index.html"><center><img src="img/topic.jpg" ></center></a>
+			<p>	<a href="vis15/index_15.html">Topic modeling by 15 topics</a></p>
+		</div>
+
+		<div id = "comparison">
+			<h3>Comparison</h3>
+			<h4>Is music features clusters related to lyrics clusters </h4>
+			
+			<center>
+				<img src="img/hCluster_topic.jpg">
+			</center>
+
+
+
+			<h4>Music Feature Cluster</h4>
+			<p>As we project our clusters of music features on the (??) dimensions we have the following clusters</p>
+
+
+
+			<h4>Dominant Clusters of Topic</h4>
+			<center>
+				<img src="img/popwordcloud.jpg" >
+			</center>
+
+
+			<h4>What about adding users information?</h4>
 			<p><b>LASSO</b><br/>
 			<ul>
 				<li>
@@ -133,30 +177,13 @@
 			</p>
 
 			<p><b>Random Forest:</b><br/>
-				<img src="img/rf.jpg" width="600" height="400">
+				<center><img src="img/rf.jpg" width="600" height="400"></center>
 			</p>
 
-			<h3>Clusters Based on Selected Features</h3>
-			    <img src="img/hclust.jpg" >
-		</div>
+			<h5>Clusters Based on Selected Features</h5>
+			    <center><img src="img/hclust.jpg" ></center>
 
-		<div id = "users">
-			<h3>User Preference</h3>	
-			<p> If we have time </p>
-		</div>
 
-		<div id = "lyrics">
-			<h3>Topic Clusters</h3>	
-			<p> </p>
-			
-			<a href="vis/index.html"><img src="img/topic.jpg" ></a>
-			<p>	<a href="vis15/index_15.html">Topic modeling by 15 topics</a></p>
-		</div>
-
-		<div id = "comparison">
-			<h3>Comparison</h3>
-			<a href="vis/index.html"><img src="img/topic.jpg" ></a>
-			<p>	<a href="vis15/index_15.html">Topic modeling by 15 topics</a></p>
 		</div>
 
 
