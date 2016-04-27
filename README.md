@@ -54,7 +54,7 @@ We then looked into how these two cluster results differ/resembles each other.
 ### Feature Selection
 ### Hierachical Clustering
 By calculating silhoutte distance, and visualizing clustering in first two pc plots, we think five clusterings will be a good result. From the two cluster plot, we also can see 5 plot makes sense.
-![Selecting Number of Clusters](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+![Selecting Number of Clusters](https://github.com/TZstatsADS/finalproject-group-2/blob/master/lib/web/img/select_dimension.png?raw=true "Logo Title Text 1")
 ```
 ## 2 0.6098073 
 ## 3 0.44251 
