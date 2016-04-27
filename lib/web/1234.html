@@ -17,17 +17,28 @@
 		</div>
 
 		<div id = "preprocessing">
-			<h3>Data Cleaning and Integrating</h3>
-			<p> How we clean data blablabla, How we clean data blablabla, How we clean data blablabla</p>
+			<h3>Data and Methodology</h3>
+			<h4>Data Integration</h4>
+			<p>We mainly integrated four datasets: </p>
+			<ul>
+				<li><b>Million Song Dataset(MSD): A random subset</b></li>		
+			<li><b>User Preference: Echo Nest Tase Profile Data</b></li>
+			<li><b>Lyics BoW: musiXmatch Dataset</b></li>
+			<li><b>Genre: Tagtraum Genre Annotations Dataset</b></li>	        
+			</ul>
 
+
+			<p>
+				The cluster of songs:
+1. We used the user playcount data to work out the pairwise "distance" between songs  
+2. We calculated for the pairwise difference between songs across all extracted features  
+3. We used Random Forest to regress the song feature difference and "user defined features", and through the importance ranking we conclude what features contribute most strongly to the "user defined similarity"
+4. We performed hierachical clustering using only the features we selected from part 3 and then look into the sound feature, lyric topics; further we visualize and compare the results accross diffferent clusters  </p>
 		</div>
 
 		<div id = "eda">
 			<h3>Exploratory Data Analysis</h3>
-			<p> How we explore data blablabla, How we explore data blablabla, How we explore data blablabla</p>
-			<h4>Artists are around the world!</h4>
-			
-		
+			<h4>Artists are around the world!</h4>	
 			<div id = "map">
 				<script type='text/javascript' src='https://public.tableau.com/javascripts/api/viz_v1.js'></script>
 				<div class='tableauPlaceholder' style='width: 1004px; height: 869px;'>
@@ -57,9 +68,6 @@
 
 			<h4>The more records, the hotter?</h4>
 			
-		
-
-
 			<div id = "hotness">
 				<script type='text/javascript' src='https://public.tableau.com/javascripts/api/viz_v1.js'></script>
 				<div class='tableauPlaceholder' style='width: 1004px; height: 869px;'>
@@ -110,28 +118,48 @@
 				</div>
 			</div>
 
-
 		</div>
 
-		<div id = "similarity">
-			<h3>Song similarity</h3>
+		<div id = "songs">
+			<h3>What Does the Music Say?</h3>
+			<h4>Music features that matter </h4>	
+			<p><b>LASSO</b><br/>
+			<ul>
+				<li>
+				Temporal Feature: 'start_of_fade_out','nbeat','nbar','bt_skw','bt_kts','sc_mn','sc_md'<br/></li>
+				<li>Sound Feature:'key', 'loudness', , 'ba_kts','timbre_mean9','timbre_median3', 'timbre_median4', 'timbre_median5','timbre_median7', 'timbre_median8', 'timbre_median9','timbre_median12', 'timbre_std4'<br/></li>
+				<li>Other: 'year'<br/></li>
+			</ul>
+			</p>
+
+			<p><b>Random Forest:</b><br/>
+				<img src="img/lasso.jpg" width="600" height="400">
+			</p>
+
+			<h3>Clusters Based on Selected Features</h3>
+			    <img src="img/hclust.jpg" >
+		</div>
+
+		<div id = "users">
+			<h3>User Preference</h3>	
+			<p> If we have time </p>
+		</div>
+
+		<div id = "lyrics">
+			<h3>Topic Clusters</h3>	
+			<p> </p>
 			
-			<p> what are the similarity told us, features </p>
+			<a href="vis/index.html"><img src="img/topic.jpg" ></a>
+			<p>	<a href="vis15/index_15.html">Topic modeling by 15 topics</a></p>
 		</div>
 
-		<div id = "d3Visualization">
-			<h3>D3 Visualization</h3>	
-			<p> bag of words comparision</p>
-			<p>	<a href="vis/index.html">Topic modeling by 10 topics</a></p>
-    		<p>	<a href="vis15/index_15.html">Topic modeling by 15 topics</a></p>
+		<div id = "comparison">
+			<h3>Comparison</h3>
+			<a href="vis/index.html"><img src="img/topic.jpg" ></a>
+			<p>	<a href="vis15/index_15.html">Topic modeling by 15 topics</a></p>
 		</div>
 
 
-
-		<div id = "Mood ">
-			<h3>Mood Analysis</h3>	
-			<p> if we have time </p>
-		</div>
 
 
 	</div>
