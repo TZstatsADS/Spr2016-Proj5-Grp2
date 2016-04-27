@@ -1,84 +1,149 @@
 <!DOCTYPE html>
-<html>
 
 <head>  
-  <title>Million Songs</title>
-  <link rel="stylesheet" href="style.css">
-
-
+	<title>Million Songs</title>
+	<link rel="stylesheet" href="style.css">
     
 </head>
 
 <body>
-<div class = "main-container">
-    <div id="title">
-      <center><h1>Become a Musical Connoisseur in 5 Minutes</h1></center>
-      <center><h3>Million Songs Dataset Exploration</h3></center>
-      <center><h4 style = "font-weight:normal">Jingying Zhou, Yibo Zhu, Yimin Zhang, Ziyue Jin, Ziyue Wu</h4></center>
-      <center><h4 style = "font-weight:normal">April 24, 2016</h4></center>
-    </div>
+	<div class = "main-container">
 
-    <div id = "preprocessing">
-      <h3>Data Cleaning and Integrating</h3>
-      <p> How we clean data blablabla, How we clean data blablabla, How we clean data blablabla</p>
+		<div id="title">
+			<center><h1>Become a Musical Connoisseur in 5 Minutes</h1></center>
+			<center><h3>Million Songs Dataset Exploration</h3></center>
+			<center><h4 style = "font-weight:normal">Jingying Zhou, Yibo Zhu, Yimin Zhang, Ziyue Jin, Ziyue Wu</h4></center>
+			<center><h4 style = "font-weight:normal">April 24, 2016</h4></center>
+		</div>
 
-    </div>
+		<div id = "preprocessing">
+			<h3>Data Cleaning and Integrating</h3>
+			<p> How we clean data blablabla, How we clean data blablabla, How we clean data blablabla</p>
 
-    <div id = "eda">
-      <h3>Exploratory Data Analysis</h3>
-      <p> How we explore data blablabla, How we explore data blablabla, How we explore data blablabla</p>
-      <h4>Artists are around the world!</h4>
-      
-    
-      <div id = "map">
-        <script type='text/javascript' src='https://public.tableau.com/javascripts/api/viz_v1.js'></script><div class='tableauPlaceholder' style='width: 1004px; height: 869px;'>
-      <noscript><a href='#'><img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;ED&#47;EDA_alll_map&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' width='1004' height='869' style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='site_root' value='' /><param name='name' value='EDA_alll_map&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;ED&#47;EDA_alll_map&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='showTabs' value='y' /></object></div>
-      
-      </div>
+		</div>
 
+		<div id = "eda">
+			<h3>Exploratory Data Analysis</h3>
+			<p> How we explore data blablabla, How we explore data blablabla, How we explore data blablabla</p>
+			<h4>Artists are around the world!</h4>
+			
+		
+			<div id = "map">
+				<script type='text/javascript' src='https://public.tableau.com/javascripts/api/viz_v1.js'></script>
+				<div class='tableauPlaceholder' style='width: 1004px; height: 869px;'>
+					<noscript>
+						<a href='#'>
+						<img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;ED&#47;EDA_alll_map&#47;Dashboard1&#47;1_rss.png' style='border: none' />
+						</a>
+					</noscript>
 
-      <h4>The more records, the hotter?</h4>
-      
-    
-
-
-      <div id = "hotness">
-        <script type='text/javascript' src='https://public.tableau.com/javascripts/api/viz_v1.js'></script><div class='tableauPlaceholder' style='width: 1004px; height: 869px;'><noscript><a href='#'><img alt='Hotness vs Record ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;ED&#47;EDA_alll_hotness&#47;HotnessvsRecord&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' width='1004' height='869' style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='site_root' value='' /><param name='name' value='EDA_alll_hotness&#47;HotnessvsRecord' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;ED&#47;EDA_alll_hotness&#47;HotnessvsRecord&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='showTabs' value='y' /></object></div>
-      </div>
-
-      <div id="genres">
-        <script type='text/javascript' src='https://public.tableau.com/javascripts/api/viz_v1.js'></script><div class='tableauPlaceholder' style='width: 1004px; height: 869px;'><noscript><a href='#'><img alt='Genre ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ge&#47;Genres_2&#47;Genre&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' width='1004' height='869' style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='site_root' value='' /><param name='name' value='Genres_2&#47;Genre' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ge&#47;Genres_2&#47;Genre&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='showTabs' value='y' /></object></div>
-      </div>
-
-
-
-    </div>
-
-    <div id = "similarity">
-      <h3>Song similarity</h3>
-      
-      <p> what are the similarity told us, features </p>
-    </div>
-
-    <div id = "d3Visualization">
-      <h3>D3 Visualization</h3> 
-      <p> bag of words comparision</p>
-    </div>
-
-    <center>
-    <div style="zoom: 0.85;">
-      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-      <script src="d3.v3.js"></script>
-      <script src="ldavis.js"></script>
-      <link rel="stylesheet" type="text/css" href="lda.css">
-      <div id = "lda" ></div>
-      <script>
-        var vis = new LDAvis("#lda", "lda.json");
-      </script>
-    </div>
-    </center>
-</div>  
+					<object class='tableauViz' width='1004' height='869' style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+					 	<param name='site_root' value='' />
+					 	<param name='name' value='EDA_alll_map&#47;Dashboard1' />
+					 	<param name='tabs' value='no' />
+					 	<param name='toolbar' value='yes' />
+					 	<param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;ED&#47;EDA_alll_map&#47;Dashboard1&#47;1.png' /> 
+					 	<param name='animate_transition' value='yes' />
+					 	<param name='display_static_image' value='yes' />
+					 	<param name='display_spinner' value='yes' />
+					 	<param name='display_overlay' value='yes' />
+					 	<param name='display_count' value='yes' />
+					 	<param name='showTabs' value='y' />
+					 </object>
+				</div>
+			
+			</div>
 
 
+			<h4>The more records, the hotter?</h4>
+			
+		
+
+
+			<div id = "hotness">
+				<script type='text/javascript' src='https://public.tableau.com/javascripts/api/viz_v1.js'></script>
+				<div class='tableauPlaceholder' style='width: 1004px; height: 869px;'>
+					<noscript>
+						<a href='#'>
+							<img alt='Hotness vs Record ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;ED&#47;EDA_alll_hotness&#47;HotnessvsRecord&#47;1_rss.png' style='border: none' />
+						</a>
+					</noscript>
+					<object class='tableauViz' width='1004' height='869' style='display:none;'>
+						<param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
+						<param name='site_root' value='' />
+						<param name='name' value='EDA_alll_hotness&#47;HotnessvsRecord' />
+						<param name='tabs' value='no' />
+						<param name='toolbar' value='yes' />
+						<param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;ED&#47;EDA_alll_hotness&#47;HotnessvsRecord&#47;1.png' /> 
+						<param name='animate_transition' value='yes' />
+						<param name='display_static_image' value='yes' />
+						<param name='display_spinner' value='yes' />
+						<param name='display_overlay' value='yes' />
+						<param name='display_count' value='yes' />
+						<param name='showTabs' value='y' />
+					</object>
+				</div>
+			</div>
+
+			<div id="genres">
+				<script type='text/javascript' src='https://public.tableau.com/javascripts/api/viz_v1.js'></script>
+				<div class='tableauPlaceholder' style='width: 1004px; height: 869px;'>
+					<noscript>
+						<a href='#'>
+							<img alt='Genre ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ge&#47;Genres_2&#47;Genre&#47;1_rss.png' style='border: none' />
+						</a>
+					</noscript>
+					<object class='tableauViz' width='1004' height='869' style='display:none;'>
+						<param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
+						<param name='site_root' value='' />
+						<param name='name' value='Genres_2&#47;Genre' />
+						<param name='tabs' value='no' />
+						<param name='toolbar' value='yes' />
+						<param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ge&#47;Genres_2&#47;Genre&#47;1.png' /> 
+						<param name='animate_transition' value='yes' />
+						<param name='display_static_image' value='yes' />
+						<param name='display_spinner' value='yes' />
+						<param name='display_overlay' value='yes' />
+						<param name='display_count' value='yes' />
+						<param name='showTabs' value='y' />
+					</object>
+				</div>
+			</div>
+
+
+		</div>
+
+		<div id = "similarity">
+			<h3>Song similarity</h3>
+			
+			<p> what are the similarity told us, features </p>
+		</div>
+
+		<div id = "d3Visualization">
+			<h3>D3 Visualization</h3>	
+			<p> bag of words comparision</p>
+			<center>
+    			<div style="zoom: 0.85;">
+      			<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      			<script src="d3.v3.js"></script>
+      			<script src="ldavis.js"></script>
+      			<link rel="stylesheet" type="text/css" href="lda.css">
+      			<div id = "lda" ></div>
+      			<script>
+        			var vis = new LDAvis("#lda", "lda.json");
+      			</script>
+    			</div>
+    		</center>
+		</div>
+
+
+
+		<div id = "Mood ">
+			<h3>Mood Analysis</h3>	
+			<p> if we have time </p>
+		</div>
+
+
+	</div>
 </body>
-</html>
+
