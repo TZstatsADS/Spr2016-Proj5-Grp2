@@ -52,20 +52,23 @@ Based on the results we made our conclustion.
 
 ## Exploratory Data Analysis
 ## Building up Our Model  
-### Feature Selection
-![Random Forest](https://github.com/TZstatsADS/finalproject-group-2/blob/master/lib/web/img/rf.jpg?raw=true "Logo Title Text 1")
-### Hierachical Clustering
+### Clustering Songs
 By calculating silhoutte distance, and visualizing clustering in first two pc plots, we think five clusterings will be a good result. From the two cluster plot, we also can see 5 plot makes sense.
 ![Selecting Number of Clusters](https://github.com/TZstatsADS/finalproject-group-2/blob/master/lib/web/img/select_5.jpeg?raw=true "Logo Title Text 1")  
-Plotting on the first 2PCs
+Plotting on the first 2PCs  
 ![Selecting Number of Clusters](https://github.com/TZstatsADS/finalproject-group-2/blob/master/lib/web/img/select_dimension.png?raw=true "Logo Title Text 1")
-
-
-#### Clustering Result   
-![HCLUST](https://github.com/TZstatsADS/finalproject-group-2/blob/master/lib/web/img/hclust.jpg?raw=true)
 
 ### Topic Modelling 
 ![10Cluster](https://github.com/TZstatsADS/finalproject-group-2/blob/master/lib/web/img/topic.jpg?raw=true)
+
+
+### A Comparison  
+
+
+### Feature Selection and Hierachical Clustering
+![Random Forest](https://github.com/TZstatsADS/finalproject-group-2/blob/master/lib/web/img/rf.jpg?raw=true "Logo Title Text 1")
+##### Clustering Result
+![HCLUST](https://github.com/TZstatsADS/finalproject-group-2/blob/master/lib/web/img/hclust.jpg?raw=true)
 
 ## Conclusion
 
