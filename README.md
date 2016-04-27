@@ -52,9 +52,12 @@ We then looked into how these two cluster results differ/resembles each other.
 ## Exploratory Data Analysis
 ## Building up Our Model  
 ### Feature Selection
+![Random Forest](https://github.com/TZstatsADS/finalproject-group-2/blob/master/lib/web/img/rf.jpg?raw=true "Logo Title Text 1")
 ### Hierachical Clustering
 By calculating silhoutte distance, and visualizing clustering in first two pc plots, we think five clusterings will be a good result. From the two cluster plot, we also can see 5 plot makes sense.
 ![Selecting Number of Clusters](https://github.com/TZstatsADS/finalproject-group-2/blob/master/lib/web/img/select_dimension.png?raw=true "Logo Title Text 1")
+* Clustering Result   
+![HCLUST](https://github.com/TZstatsADS/finalproject-group-2/blob/master/lib/web/img/hclust.jpg?raw=true)
 ```
 ## 2 0.6098073 
 ## 3 0.44251 
