@@ -67,7 +67,7 @@ By calculating silhoutte distance, and visualizing clustering in first two pc pl
 ## 9 0.02371691 
 ## 10 0.0224799
 ```
-* Clustering Result   
+##### Clustering Result   
 ![HCLUST](https://github.com/TZstatsADS/finalproject-group-2/blob/master/lib/web/img/hclust.jpg?raw=true)
 
 ### Topic Modelling 
