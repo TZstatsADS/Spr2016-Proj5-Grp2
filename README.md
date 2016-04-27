@@ -32,9 +32,9 @@ Ziyue JIN, Ziyue WU, Yimin ZHANG, Jingying ZHOU and Yibo ZHU
 * How we utilized our data:  
 We used this play-count data to generate a "user defined" song similiarity mesure, and then tried random forest and LASSO to select the sound features (from dataset 1) that play the most important roles in determining thi
 
-##### Source 3. Lyrics BoW
+##### Source 3. Lyrics Bag-of-Words
 * Source: [musiXmatch dataset](http://labrosa.ee.columbia.edu/millionsong/musixmatch)
-* Format:.txt(BoW)
+* Format:.db(BoW)
 * How we utilized our data:   
 We implemented a topic model using Laten Dirichlet Allocation with 10 and 15 topics. This cluster is generated purely independently from the rest of the clusters, and we would like to see if the clusters generated from the sound features are indeed "literally" different from each other.
 
@@ -45,33 +45,31 @@ We implemented a topic model using Laten Dirichlet Allocation with 10 and 15 top
 
 ## Methodology
 #### To make a long story short,  
-We used playcount data to select song features that play an important role in deciding the "crowd defined similarity", and then clustered our songs using the sound features.  
-Using the lyrics Bag-of-Words data, we did topic modelling and assigned "topics" to the songs we have.   
-We then looked into how these two cluster results differ/resembles each other.
+* We clustered our songs based purely on the song features
+* Using the lyrics Bag-of-Words data, we did topic modelling and looked into how these two cluster results differ/resembles each other!
+* Lastly, We used playcount data to select song features that play an important role in deciding the "crowd defined similarity", we then clustered our songs again using only the selected sound features
+Based on the results we made our conclustion.
 
 ## Exploratory Data Analysis
 ## Building up Our Model  
-### Feature Selection
-![Random Forest](https://github.com/TZstatsADS/finalproject-group-2/blob/master/lib/web/img/rf.jpg?raw=true "Logo Title Text 1")
-### Hierachical Clustering
+### Clustering Songs
 By calculating silhoutte distance, and visualizing clustering in first two pc plots, we think five clusterings will be a good result. From the two cluster plot, we also can see 5 plot makes sense.
+![Selecting Number of Clusters](https://github.com/TZstatsADS/finalproject-group-2/blob/master/lib/web/img/select_5.jpeg?raw=true "Logo Title Text 1")  
+Plotting on the first 2PCs  
 ![Selecting Number of Clusters](https://github.com/TZstatsADS/finalproject-group-2/blob/master/lib/web/img/select_dimension.png?raw=true "Logo Title Text 1")
-```
-## 2 0.6098073 
-## 3 0.44251 
-## 4 0.03555164 
-## 5 0.02601014 
-## 6 0.02841965 
-## 7 0.02566342 
-## 8 0.02302715 
-## 9 0.02371691 
-## 10 0.0224799
-```
-#### Clustering Result   
-![HCLUST](https://github.com/TZstatsADS/finalproject-group-2/blob/master/lib/web/img/hclust.jpg?raw=true)
 
 ### Topic Modelling 
 ![10Cluster](https://github.com/TZstatsADS/finalproject-group-2/blob/master/lib/web/img/topic.jpg?raw=true)
+
+
+### A Comparison  
+
+
+### Feature Selection and Hierachical Clustering
+##### Based on Random Forest
+![Random Forest](https://github.com/TZstatsADS/finalproject-group-2/blob/master/lib/web/img/rf.jpg?raw=true "Logo Title Text 1")
+##### Clustering Result
+![HCLUST](https://github.com/TZstatsADS/finalproject-group-2/blob/master/lib/web/img/hclust.jpg?raw=true)
 
 ## Conclusion
 

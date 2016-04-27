@@ -10,7 +10,7 @@
 	<div class = "main-container">
 
 		<div id="title">
-			<center><h1>Become a Musical Connoisseur in 5 Minutes</h1></center>
+			<center><h1>What is mainstream music?</h1></center>
 			<center><h3>Million Songs Dataset Exploration</h3></center>
 			<center><h4 style = "font-weight:normal">Jingying Zhou, Yibo Zhu, Yimin Zhang, Ziyue Jin, Ziyue Wu</h4></center>
 			<center><h4 style = "font-weight:normal">April 24, 2016</h4></center>
@@ -65,34 +65,6 @@
 			
 			</div>
 
-
-			<h4>The more records, the hotter?</h4>
-			
-			<div id = "hotness">
-				<script type='text/javascript' src='https://public.tableau.com/javascripts/api/viz_v1.js'></script>
-				<div class='tableauPlaceholder' style='width: 1004px; height: 869px;'>
-					<noscript>
-						<a href='#'>
-							<img alt='Hotness vs Record ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;ED&#47;EDA_alll_hotness&#47;HotnessvsRecord&#47;1_rss.png' style='border: none' />
-						</a>
-					</noscript>
-					<object class='tableauViz' width='1004' height='869' style='display:none;'>
-						<param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
-						<param name='site_root' value='' />
-						<param name='name' value='EDA_alll_hotness&#47;HotnessvsRecord' />
-						<param name='tabs' value='no' />
-						<param name='toolbar' value='yes' />
-						<param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;ED&#47;EDA_alll_hotness&#47;HotnessvsRecord&#47;1.png' /> 
-						<param name='animate_transition' value='yes' />
-						<param name='display_static_image' value='yes' />
-						<param name='display_spinner' value='yes' />
-						<param name='display_overlay' value='yes' />
-						<param name='display_count' value='yes' />
-						<param name='showTabs' value='y' />
-					</object>
-				</div>
-			</div>
-
 			<div id="genres">
 				<script type='text/javascript' src='https://public.tableau.com/javascripts/api/viz_v1.js'></script>
 				<div class='tableauPlaceholder' style='width: 1004px; height: 869px;'>
@@ -120,43 +92,78 @@
 
 		</div>
 
+		<div>
+			<h3>How to Define a Mainstream Music?</h3>
+			<center><p style="font-size:50px;">Sound Features + Lyrics = Music</p></center>
+		</div>
+
+
 		<div id = "songs">
-			<h3>What Does the Music Say?</h3>
-			<h4>Music features that matter </h4>	
-			<p><b>LASSO</b><br/>
+			<h3>What Does the Sound Say?</h3>
 			<ul>
-				<li>
-				Temporal Feature: 'start_of_fade_out','nbeat','nbar','bt_skw','bt_kts','sc_mn','sc_md'<br/></li>
-				<li>Sound Feature:'key', 'loudness', , 'ba_kts','timbre_mean9','timbre_median3', 'timbre_median4', 'timbre_median5','timbre_median7', 'timbre_median8', 'timbre_median9','timbre_median12', 'timbre_std4'<br/></li>
-				<li>Other: 'year'<br/></li>
+			<li>1. Used all musics features for clusterings.</li>		
+			<li>2. Used Silhoutte methods to select number of clusters.</li>        
 			</ul>
-			</p>
 
-			<p><b>Random Forest:</b><br/>
-				<img src="img/rf.jpg" width="600" height="400">
-			</p>
+			<center>
+				<img src="img/select_5.jpeg">
+			</center>
 
-			<h3>Clusters Based on Selected Features</h3>
-			    <img src="img/hclust.jpg" >
+			<center>
+				<p><a href="blabla.html">Projected on first two dimensions in PCA</a></p>
+				<img src = "img/select_dimension.png">
+			</center>
+
 		</div>
 
-		<div id = "users">
-			<h3>User Preference</h3>	
-			<p> If we have time </p>
-		</div>
 
 		<div id = "lyrics">
 			<h3>Topic Clusters</h3>	
-			<p> </p>
+			<ul>
+			<li>1. Used Bag of word from each songs.</li>		
+			<li>2. Choose the number of clusters based on the log likelihood.</li>        
+			</ul>
 			
-			<a href="vis/index.html"><img src="img/topic.jpg" ></a>
+			<a href="vis/index.html"><center><img src="img/topic.jpg" ></center></a>
 			<p>	<a href="vis15/index_15.html">Topic modeling by 15 topics</a></p>
 		</div>
 
 		<div id = "comparison">
 			<h3>Comparison</h3>
-			<a href="vis/index.html"><img src="img/topic.jpg" ></a>
-			<p>	<a href="vis15/index_15.html">Topic modeling by 15 topics</a></p>
+			<p>How are they related?</p>
+			
+			<center>
+				<img src="img/hCluster_topic.jpg">
+				<p>We obtained the Chi-squared test of independence with p-value = 2.2e-16 </p>
+			</center>
+
+
+
+			<h4>Sound Feature Cluster</h4>
+			<center><img src="img/soundFeatureStats.jpg"></center>
+
+			<h4>Dominant Clusters of Topic</h4>
+			<center>
+				<img src="img/popwordcloud.jpg" >
+			</center>
+
+
+			<h4>What about adding users information?</h4>
+			<p><b>LASSO</b><br/>
+			<ul>
+				<li>
+				Temporal Feature: 'start_of_fade_out','nbeat','nbar','bt_skw','bt_kts','sc_mn','sc_md'<br/></li>
+				<li>melody Feature:'key', 'loudness', , 'ba_kts','timbre_mean9','timbre_median3', 'timbre_median4', 'timbre_median5','timbre_median7', 'timbre_median8', 'timbre_median9','timbre_median12', 'timbre_std4'<br/></li>
+				<li>Other: 'year'<br/></li>
+			</ul>
+			</p>
+			<center><div style="zoom: 0.7;"><img src="img/hclust.jpg"/ ></div></center>
+
+			<p><b>Random Forest:</b><br/>
+				<center><img src="img/rf.jpg" width="600" height="400"></center>
+			</p>
+			<center><img src="img/rf_cluster.png"></center>
+			
 		</div>
 
 
