@@ -50,7 +50,8 @@ Using the lyrics Bag-of-Words data, we did topic modelling and assigned "topics"
 We then looked into how these two cluster results differ/resembles each other.
 
 ## Exploratory Data Analysis
-## Building up Our Model
+## Building up Our Model  
+### Feature Selection
 ### Hierachical Clustering
 By calculating silhoutte distance, and visualizing clustering in first two pc plots, we think five clusterings will be a good result. From the two cluster plot, we also can see 5 plot makes sense.
 ![Selecting Number of Clusters](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
@@ -65,6 +66,7 @@ By calculating silhoutte distance, and visualizing clustering in first two pc pl
 ## 9 0.02371691 
 ## 10 0.0224799
 ```
+### Topic Modelling 
 
 ## Reference
 Capturing the Temporal Domain
