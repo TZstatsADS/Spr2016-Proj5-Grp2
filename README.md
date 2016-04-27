@@ -66,6 +66,7 @@ Plotting on the first 2PCs
 
 
 ### Feature Selection and Hierachical Clustering
+##### Based on Random Forest
 ![Random Forest](https://github.com/TZstatsADS/finalproject-group-2/blob/master/lib/web/img/rf.jpg?raw=true "Logo Title Text 1")
 ##### Clustering Result
 ![HCLUST](https://github.com/TZstatsADS/finalproject-group-2/blob/master/lib/web/img/hclust.jpg?raw=true)
