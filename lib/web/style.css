@@ -16,26 +16,52 @@ img {
 	
 h1 {
   font-size: 34px;
+  font-family: "HelveticaNeue-CondensedBlack";
+
 }
 
 h1.title {
   font-size: 38px;
+  font-family: "Helvetica Neue";
+  
 }
 	
 h2 {
+  color: red;
   font-size: 30px;
 }
 h3 {
   font-size: 24px;
-}
+/*   color: green; */
+  font-family: "Helvetica Neue";color:#446396;/* #3e88b6 */;/* #456494; */
+  }
 h4 {
   font-size: 18px;
+  font-family: "Helvetica Neue"; color:#446396;/* #446396 */
 }
 h5 {
-  font-size: 16px;
+  font-size: 17px;
+   font-family: 'Lobster Two', cursive; color:#3399ff;font-weight:normal;
 }
 h6 {
   font-size: 12px;
+}
+p {
+  font-family: "Helvetica Neue";
+}
+
+
+ul {
+    background:#3399ff;
+    padding: 20px;
+    font-family: "Helvetica Neue";
+}
+
+
+ul li {
+    background: #cce5ff;
+    padding: 5px;
+    margin: 5px;
 }
 
 .tabbed-pane {
