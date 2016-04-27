@@ -76,3 +76,4 @@ By calculating silhoutte distance, and visualizing clustering in first two pc pl
 Capturing the Temporal Domain
 in Echonest Features
 for Improved Classification Effectiveness [*On Feature Selection*](http://www.ifs.tuwien.ac.at/~schindler/pubs/AMR2012.pdf)
+A Topic Model for Movie Reviews[*Topic Modelling*](http://cpsievert.github.io/LDAvis/reviews/reviews.html)
