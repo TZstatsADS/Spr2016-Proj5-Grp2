@@ -74,7 +74,7 @@ Plotting on the first 2PCs
 ![HCLUST](https://github.com/TZstatsADS/finalproject-group-2/blob/master/lib/web/img/hclust.jpg?raw=true)
 
 ## Conclusion
-
+`will update on 29th Apr.`
 
 ## Reference
 Capturing the Temporal Domain
