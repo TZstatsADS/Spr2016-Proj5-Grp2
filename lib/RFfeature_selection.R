@@ -56,7 +56,8 @@ dev.off()
 ### use the first 10 important variables by MSE decreasing do hierarchical clustering
 use.var = importance.order[1:10,1]
 load("data/fulldata.RData")
-var.ind = match(use.var[,1],colnames(fulldata))
+load('data/1655id.RData')
+var.ind = match(use.var,colnames(fulldata))
 ind = match(tid,fulldata$track_id) ### use the id that has the lyric information
 new.dat = fulldata[ind,c(14,var.ind)]
 col.sd = apply(new.dat[,-1],2,sd)
@@ -68,8 +69,9 @@ for ( i in 1:10 ){
 
 hc.out = hclust(dist(new.dat.sd))
 k <- 3
-library(plotrix)
+library(dendextend)
 library(circlize)
+library(colorspace)
 cols <- rainbow_hcl(k)
 dend <- as.dendrogram(hc.out)
 dend <- color_branches(dend, k = k)
