@@ -13,7 +13,7 @@
 			<center><h1>What is mainstream music?</h1></center>
 			<center><h3>Million Songs Dataset Exploration</h3></center>
 			<center><h4 style = "font-weight:normal">Jingying Zhou, Yibo Zhu, Yimin Zhang, Ziyue Jin, Ziyue Wu</h4></center>
-			<center><h4 style = "font-weight:normal">April 24, 2016</h4></center>
+			<center><h4 style = "font-weight:normal">April 27, 2016</h4></center>
 		</div>
 
 		<div id = "preprocessing">
@@ -37,7 +37,7 @@
 		</div>
 
 		<div id = "eda">
-			<h3>Exploratory Our Dataset</h3>
+			<h3>Explore Our Dataset</h3>
 			<ul>
 			<li>1. Million Songs Dataset.</li>		
 			<li>2. Artists are mainly from North America and Europe.</li>
@@ -75,7 +75,7 @@
 			<li>1. Amount records increasing faster and faster.</li>		
 			<li>2. After 2005 a lot of records weren't collected in the dataset .</li>
 			<li>3. Golden age of rock starts from 1970s (Wiki).</li>		
-			<li>4. 1977 the first metal record appeared.</li>      
+			<li>4. 1972 the first metal record appeared.</li>      
 			<li>5. As an old mainstream music, jazz is becoming less popular.</li>     
 			</ul>
 
@@ -105,8 +105,11 @@
 			</div>
 
 		</div>
-		<a href="https://www.youtube.com/watch?v=FFvs49kdLaA"><p>Mainstream?</p></a>
-
+		<center>
+		<a href="https://www.youtube.com/watch?v=FFvs49kdLaA"><p>Mainstream?</p>
+		<img src="img/popsong.png" />
+		</a>
+		</center>
 
 		<div>
 			<h3>How to Define a Mainstream Music?</h3>
@@ -117,7 +120,7 @@
 		<div id = "songs">
 			<h3>What Does the Sound Say?</h3>
 			<ul>
-			<li>1. Used all musics features for clusterings.</li>		
+			<li>1. Used all musics features for clusterings.(160~ features including key, pitches..)</li>		
 			<li>2. Used Silhoutte methods to select number of clusters.</li>        
 			</ul>
 
@@ -164,7 +167,7 @@
 			</center>
 
 
-			<h4>Verify by adding users information?</h4>
+			<h3>Verify by adding users information</h3>
 				<center><p style="font-size:50px;">Sound Features vs User defined Similarity</p></center>
 				<li>Sound Features: independent variables</li>
 				<li>User defined Similarity: dependent variables</li>
@@ -192,10 +195,24 @@
 			
 			<p>Most of tracks defined in our mainstream formula are falling into our largest clusters on the above models: (1154/1175) </p>
 
-
 		</div>
 
+		<div>
+			<h3>Conclusion</h3>
+			<ol type="1">
+				<li>Lyrics and Sound feature are highly correlated (p-value = 2.2e-16)<br/> </li>
 
+				<li>Mainstream music tends to be lounder and faster compared with niche music<br/>
+				<center><img src="img/soundFeatureStats.jpg"  width="600" height="400"><br /></center>
+				Thus, it can also explain why jazz becomes less popular over time.
+				</li>
+
+				<li>After adding user defined similarity, the result we had reinforced conslusion 2</li>
+
+				<li>Based on the models we built, we have three dimensions ( sound, lyrics, user defined similarity) to describe a music. Those three dimensions can be used for recommending similar music. <br/></li>
+				
+			</ol>
+		</div>
 
 
 	</div>
