@@ -44,6 +44,13 @@
 			<li>3. Bubble size stands for number of records.</li>		
 			<li>4. Color stands for hotness of the artists.</li>         
 			</ul>
+			<p>     We mainly analyze the clusters of songs to extract insights on Mainstream Music and the potential further application.</p>
+			<ol type="1">
+			<li>we  applied sound characteristics(like tempo, loudness, pitch and other 100 features) to get hierarchical clustering of songs</li>
+			<li>we used LDA to generate topic model of lyrics, and thus gained clusters of songs based on bag of words description.</li>
+			<li>We further used the user playcount data to work out the pairwise "distance" between songs, and thus calculated the used-defined similarity. So that user-defined clusters can be reached by feature selection and </li>
+			<li>We visualized and discussed the statistically significant link between lyrics and sound characteristic of songs.</li>
+			<li>Our results can be formed into a good song recommendation system, which incorporates user preference, sound characteristics and lyrics preference.</li>
 
 			<div id = "map">
 				<script type='text/javascript' src='https://public.tableau.com/javascripts/api/viz_v1.js'></script>
@@ -72,11 +79,10 @@
 			</div>
 			<p>Overview of our songs</p>
 			<ul>
-			<li>1. Amount records increasing faster and faster.</li>		
-			<li>2. After 2005 a lot of records weren't collected in the dataset .</li>
-			<li>3. Golden age of rock starts from 1970s (Wiki).</li>		
-			<li>4. 1972 the first metal record appeared.</li>      
-			<li>5. As an old mainstream music, jazz is becoming less popular.</li>     
+			<li>1. Except the missing records in recent years, the total amount of songs increased sharply.</li>		
+			<li>2. Golden age of rock starts from 1970s (Wiki).</li>		
+			<li>3. 1972 the first metal record appeared.</li>      
+			<li>4. As an old mainstream music, jazz is becoming less popular.</li>     
 			</ul>
 
 			<div id="genres">
@@ -103,12 +109,15 @@
 					</object>
 				</div>
 			</div>
-
+			<p>Upon our previous EDA, we're very curious about why mainstream music changes over time. What're the characteristics of a mainstream song? How niche differ from mainstream music? Dose lyrics count in the difference? What is the potential application of a better understanding of Million Song Data Set.</p>
 		</div>
 		<center>
 		<a href="https://www.youtube.com/watch?v=FFvs49kdLaA"><p>Mainstream?</p>
 		<img src="img/popsong.png" />
 		</a>
+
+		<p>So here is a questions. Do you think the "Little Apple" is a mainstream song?</p>
+
 		</center>
 
 		<div>
@@ -140,7 +149,10 @@
 			<h3>Lyrics Clusters</h3>	
 			<ul>
 			<li>1. Used bag of words from each song.</li>		
-			<li>2. Choose the number of clusters based on the log likelihood.</li>        
+			<li>2. Choose the number of clusters based on the log likelihood.</li>   
+			<li>3. Eventually, we chose 10 topics for clustering and have the following graphs. Click to have more details</li>
+			<li>4. In the coordinate, similar topics tempt to stay closer to each other.</li>
+			<li>5. The size of the bubble stands for the popularity of the topics.</li>
 			</ul>
 			
 			<a href="vis/index.html"><center><img src="img/topic.jpg" ></center></a>
@@ -169,6 +181,15 @@
 
 			<h3>Verify by adding users information</h3>
 				<center><p style="font-size:50px;">Sound Features vs User defined Similarity</p></center>
+
+				<p>User defined similarity monitoring model:<br/>
+				menon as similarity between to songs. But we need to distinguish similarity from popularity. So here is the modelling function:
+
+				<center><img src = "img/formula.png"></center>
+
+				<p>After calculating similarity, we found that similarity matrix is pretty large but sparse. So we used case control to cut down computing size,  while keep the representativeness  of the original similarity matrix between two songs</p>
+
+
 				<li>Sound Features: independent variables</li>
 				<li>User defined Similarity: dependent variables</li>
 				<li><b>Case control to subset the sparse data</b><br/></li>
