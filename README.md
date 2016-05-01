@@ -1,7 +1,7 @@
 # A Million Song Dataset
 Ziyue JIN, Ziyue WU, Yimin ZHANG, Jingying ZHOU and Yibo ZHU
-
-[report](https://zac2116.github.io/)
+ 
+#[To view our full report please click here! ](https://zac2116.github.io/)
 
 ## Data
 ##### Source 1. Sound Analysis
@@ -52,31 +52,5 @@ We implemented a topic model using Laten Dirichlet Allocation with 10 and 15 top
 * Lastly, We used playcount data to select song features that play an important role in deciding the "crowd defined similarity", we then clustered our songs again using only the selected sound features
 Based on the results we made our conclustion.
 
-## Exploratory Data Analysis
-## Building up Our Model  
-### Clustering Songs
-By calculating silhoutte distance, and visualizing clustering in first two pc plots, we think five clusterings will be a good result. From the two cluster plot, we also can see 5 plot makes sense.
-![Selecting Number of Clusters](https://github.com/TZstatsADS/finalproject-group-2/blob/master/lib/web/img/select_5.jpeg?raw=true "Logo Title Text 1")  
-Plotting on the first 2PCs  
-![Selecting Number of Clusters](https://github.com/TZstatsADS/finalproject-group-2/blob/master/lib/web/img/select_dimension.png?raw=true "Logo Title Text 1")
+#[To view our full report please click here! ](https://zac2116.github.io/)
 
-### Topic Modelling 
-![10Cluster](https://github.com/TZstatsADS/finalproject-group-2/blob/master/lib/web/img/topic.jpg?raw=true)
-
-
-### A Comparison  
-
-
-### Feature Selection and Hierachical Clustering
-##### Based on Random Forest
-![Random Forest](https://github.com/TZstatsADS/finalproject-group-2/blob/master/lib/web/img/rf.jpg?raw=true "Logo Title Text 1")
-##### Clustering Result
-![HCLUST](https://github.com/TZstatsADS/finalproject-group-2/blob/master/lib/web/img/hclust.jpg?raw=true)
-
-## Conclusion
-
-## Reference
-Capturing the Temporal Domain
-in Echonest Features
-for Improved Classification Effectiveness [*On Feature Selection*](http://www.ifs.tuwien.ac.at/~schindler/pubs/AMR2012.pdf)  
-A Topic Model for Movie Reviews[*Topic Modelling*](http://cpsievert.github.io/LDAvis/reviews/reviews.html)
