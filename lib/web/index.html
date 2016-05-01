@@ -28,22 +28,6 @@
 			</ul>
 
 
-			<p>
-				The cluster of songs:
-1. We used the user playcount data to work out the pairwise "distance" between songs  
-2. We calculated for the pairwise difference between songs across all extracted features  
-3. We used Random Forest to regress the song feature difference and "user defined features", and through the importance ranking we conclude what features contribute most strongly to the "user defined similarity"
-4. We performed hierachical clustering using only the features we selected from part 3 and then look into the sound feature, lyric topics; further we visualize and compare the results accross diffferent clusters  </p>
-		</div>
-
-		<div id = "eda">
-			<h3>Explore Our Dataset</h3>
-			<ul>
-			<li>1. Million Songs Dataset.</li>		
-			<li>2. Artists are mainly from North America and Europe.</li>
-			<li>3. Bubble size stands for number of records.</li>		
-			<li>4. Color stands for hotness of the artists.</li>         
-			</ul>
 			<p>     We mainly analyze the clusters of songs to extract insights on Mainstream Music and the potential further application.</p>
 			<ol type="1">
 			<li>we  applied sound characteristics(like tempo, loudness, pitch and other 100 features) to get hierarchical clustering of songs</li>
@@ -51,6 +35,18 @@
 			<li>We further used the user playcount data to work out the pairwise "distance" between songs, and thus calculated the used-defined similarity. So that user-defined clusters can be reached by feature selection and </li>
 			<li>We visualized and discussed the statistically significant link between lyrics and sound characteristic of songs.</li>
 			<li>Our results can be formed into a good song recommendation system, which incorporates user preference, sound characteristics and lyrics preference.</li>
+		</div>
+
+		<div id = "eda">
+			<h3>Explore Our Dataset</h3>
+			<ul>
+			<li>Visualization of artists and primary trends in Million Songs Dataset.</li>		
+			<li>1. Artists are mainly from North America and Europe.</li>
+            <li>2. In a whole, tempos, loudness and duration increases over time </li>
+			<li>3. Bubble size stands for number of records.</li>		
+			<li>4. Color stands for hotness of the artists.</li>         
+			</ul>
+			
 
 			<div id = "map">
 				<script type='text/javascript' src='https://public.tableau.com/javascripts/api/viz_v1.js'></script>
@@ -79,6 +75,7 @@
 			</div>
 			<p>Overview of our songs</p>
 			<ul>
+            <li>Visualization of Genres</li>
 			<li>1. Except the missing records in recent years, the total amount of songs increased sharply.</li>		
 			<li>2. Golden age of rock starts from 1970s (Wiki).</li>		
 			<li>3. 1972 the first metal record appeared.</li>      
@@ -127,11 +124,10 @@
 
 
 		<div id = "songs">
-			<h3>What Does the Sound Say?</h3>
+			<h3>Part1: Sound Cluster Analysis</h3>
 			<ul>
-			<li>1. Used all musics features for clusterings.(160~ features including key, pitches..)</li>		
-			<li>2. Used Silhoutte methods to select number of clusters.</li>        
-			</ul>
+			<p>Using all music’s features to do hierarchical clustering, and then using silhouette information to determine the appropriate number of clusterings, which is five. Then, proving the results by visualizing data onto dimension reduction map of PCA, using first two principal components. We can see different clusterings are separated in the plot.</p>		
+			   
 
 			<center>
 				<img src="img/select_5.jpeg">
@@ -146,7 +142,7 @@
 
 
 		<div id = "lyrics">
-			<h3>Lyrics Clusters</h3>	
+			<h3>Part2:Lyrics Cluster Analysis</h3>	
 			<ul>
 			<li>1. Used bag of words from each song.</li>		
 			<li>2. Choose the number of clusters based on the log likelihood.</li>   
@@ -160,30 +156,38 @@
 		</div>
 
 		<div id = "comparison">
-			<h3>Comparison</h3>
-			<p>How are they related?</p>
+			<h3>Comparison Between Sound Clusters and lyricc Clusters</h3>
+			<p>How are these two kinds of music clusters related?</p>
 			
 			<center>
 				<img src="img/comparison.jpg">
-				<p>We obtained the Chi-squared test of independence with p-value = 2.2e-16 </p>
 			</center>
+            	<p>We obtained the Chi-squared test of independence with p-value = 2.2e-16, so we find that lyrics has a strong corelation with sound characteristics. </p>
+                <p>The Strong Coorelation between lyrics and sound can help us dig out insights on mainsteam music. As what we can see in the above bubble figure(classifier overlap), we find topic model and sound 
+                    hierachical has a dominate overlap in (1,1), (1,6), (1,10). The size-dominated bubbles themselves show they are more prone to be mainstream music, because there are more songs in those clusters which are similar to each other. 
+                    And this is how we define the mainstream music. Furthermore, the common occurrence means that mainstream music share some common characteristics in sound and lyrics!
+                </p>
 
-			<h3>Here is our mainstream music formula</h3>
+			<h3>Here is a deeper interpretation of mainstream music.</h3>
 
-			<h4>Sound Feature Cluster</h4>
+			<h4>Sound Feature of mainstream music</h4>
 			<center><img src="img/soundFeatureStats.jpg"  width="600" height="400"></center>
-
-			<h4>Dominant Clusters of Topic</h4>
+                <li>From sound features analysis, we find mainstream music tends to be louder and faster (high loudness and more tempos). They don't have much difference in duration and pitch.</li>
+			<h4>Lyrics of mainstream music</h4>
 			<center>
 				<img src="img/popwordcloud.jpg" >
 			</center>
+            <li>Mostly, what appeared in mainstream music are some common words</li>
+            <li>In others words, if the lyrics of a song have more common words. They're more likely to be mainstream music. Therefore, they're also more likely to be louder and faster</li>
 
-
-			<h3>Verify by adding users information</h3>
+			<h3>Verification of mainstream music by adding users information</h3>
+            <p>On the above, we use sound features and lyrics to do the clusters, and then find "mainstream music". But whether they are maintream music? In fact we need user play count info to justify they are.
+                If some songs are similar to a lot of other songs from users' perspective, they are indeed mainstream music. So our goal in this section is to verify that users regard the songs with common words, higher loudness and more tempos as mainsteam music.
+            </p>
 				<center><p style="font-size:50px;">Sound Features vs User defined Similarity</p></center>
 
 				<p>User defined similarity monitoring model:<br/>
-				menon as similarity between to songs. But we need to distinguish similarity from popularity. So here is the modelling function:
+				If two songs are listened by one user, we regard this phenomenon as similarity between two songs. But we need to distinguish similarity from popularity. So here is the modelling function:
 
 				<center><img src = "img/formula.png"></center>
 
@@ -196,9 +200,11 @@
 
 
 
-
-			<p><b>LASSO</b><br/>
+            <p><b>Sound Feature Selection Based on User Play Count</b></p>
+            <p>We use user play count to select features, and then use selected features to do the hierachical cluster of songs. This result can show the user opionions very well.</p>
+			<p>LASSO<br/>
 			<ul>
+                <p>Then, I used music features as independent variables and user defined similarity as dependent variables to do lasso regression for feature selection. By setting lambda value by cross validation, we found the best lambda is 0.3. After running lasso regression, we retained 20 features. We interpreted these 20 features as best explaining the user defined dissimilarity between music.</p>
 				<li>
 				Temporal Feature: 'start_of_fade_out','nbeat','nbar','bt_skw','bt_kts','sc_mn','sc_md'<br/></li>
 				<li>melody Feature:'key', 'loudness', , 'ba_kts','timbre_mean9','timbre_median3', 'timbre_median4', 'timbre_median5','timbre_median7', 'timbre_median8', 'timbre_median9','timbre_median12', 'timbre_std4'<br/></li>
@@ -207,14 +213,14 @@
 			</p>
 
 			<center><img src="img/hclust.jpg" ></center>
-			
+			<p>•	By using only 20 features selected by lasso regression, we redo hierarchical clustering. After running clustering method, we got a clearer pattern of main stream music and niche music. There is a clearer pattern in the clustering tree plot. Then, we recomputed mean of those features, we saw the result reconfirm mainstream music is faster and louder.</p>
 
-			<p><b>Random Forest:</b><br/>
+			<p>Random Forest:<br/>
 				<center><img src="img/rf.jpg" width="600" height="400"></center>
 			</p>
 			<center><img src="img/rf_cluster.png" width="600" height="400"></center>
 			
-			<p>Most of tracks defined in our mainstream formula are falling into our largest clusters on the above models: (1154/1175) </p>
+			<p>Most of tracks defined in our mainstream formula(louder, faster, common words) are falling into our largest clusters on the above models: (1154/1175), which means those songs are indeed mainsteram music </p>
 
 		</div>
 
